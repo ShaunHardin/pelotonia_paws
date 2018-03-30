@@ -37,7 +37,6 @@ environment :prod do
   set include_erts: true
   set include_src: false
   set cookie: :"b=MgUDcC{=siO~~)k=aK;M~3Bo*JM)XFZxswhVYA6Cg^((|4_{0(&ROHuoE1@4h:"
-  set output_dir: "rel/pelotonia_paws"
 end
 
 # You may define one or more releases in this file.
