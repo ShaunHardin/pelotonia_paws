@@ -16,3 +16,20 @@ pre_erlang_get_and_update_deps() {
     "
   fi
 }
+
+pre_erlang_clean_compile() {
+  status "Running phx.digest" # log output prepended with "----->"
+  __sync_remote " # runs the commands on the build host
+    # [ -f ~/.profile ] && sourece ~/.profile # load profile (optional)
+    source ~/.profile
+    set -e # fail if any command fails (recommended)
+    cd '$BUILD_AT'/assets # enter the build directory on the build host (required)
+    mkdir -p priv/static # required by the phx.digest task
+    npm install
+
+    ./node_modules/brunch/bin/brunch build --production
+    cd '$BUILD_AT'
+
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
+  "
+}
