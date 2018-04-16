@@ -1,0 +1,27 @@
+.btn-navy {
+  background: #002B49;
+  border: 1px solid transparent;
+  -webkit-transition: .2s all;
+  -o-transition: .2s all;
+  transition: .2s all;
+}
+
+.btn-navy:hover {
+  color: #00afec;
+  background: #3ad531;
+  border: 1px solid #00afec;
+}
+
+.btn-gray {
+  background: #586770;
+  border: 1px solid transparent;
+  -webkit-transition: .2s all;
+  -o-transition: .2s all;
+  transition: .2s all;
+}
+
+.btn-gray:hover {
+  color: #00afec;
+  background: #3ad531;
+  border: 1px solid #00afec;
+}
